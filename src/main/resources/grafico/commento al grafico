@@ -1,0 +1,12 @@
+Ho creato una tabella utenti per memorizzare le informazioni sugli utenti, come data di nascita, numero di tessera, cognome e nome.
+ La chiave primaria id è essenziale per identificare univocamente ogni utente.
+
+La tabella prestiti registra i prestiti effettuati dagli utenti, includendo informazioni dettagliate come la data di inizio,
+la data di restituzione effettiva e quella prevista, l'elemento prestato e l'utente che ha effettuato il prestito. Le chiavi id e utente_id collegano questa tabella agli utenti,
+tracciando chi ha preso in prestito cosa e quando.
+
+ Ho gestito gli elementi disponibili nella biblioteca, come libri e riviste, nella tabella catalogo.
+Contiene informazioni importanti come l'anno di pubblicazione, numero di pagine, codice ISBN e titolo. L'uso di id come chiave primaria permette di identificare univocamente ogni elemento del catalogo.
+
+ Ho separato le informazioni specifiche delle riviste (periodicità) e dei libri (autore e genere) in tabelle dedicate.
+Questo approccio aiuta a mantenere il catalogo ben organizzato.
