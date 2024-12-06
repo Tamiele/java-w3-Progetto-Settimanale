@@ -230,6 +230,7 @@ public class MainUpdate {
                 });
             }
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("Errore durante la ricerca dei prestiti scaduti.");
         }
     }

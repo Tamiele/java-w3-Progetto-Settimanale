@@ -47,12 +47,7 @@ public class PrestitoDAO {
 
 
     public List<Prestito> findPrestitiScadutiENonRestituiti() {
-        TypedQuery<Prestito> query = em.createQuery(
-                "SELECT p FROM Prestito p " +
-                        "WHERE (p.dataRestituzioneEffettivo IS NULL OR p.dataRestituzioneEffettivo = '') " +
-                        "AND p.dataRestituzionePrevista < :oggi", Prestito.class
-        );
-        query.setParameter("oggi", LocalDate.now());
+        TypedQuery<Prestito> query = em.createQuery("SELECT p FROM Prestito p WHERE p.dataRestituzionePrevista < CURRENT_DATE AND p.dataRestituzioneEffettivo IS NULL", Prestito.class);
         return query.getResultList();
     }
 

@@ -107,9 +107,9 @@ public class MainCreate {
             prestito.setDataRestituzionePrevista(dataRestituzione);
 
             if (i < 5) {
-                prestito.setDataRestituzioneEffettivo("Scaduto e non restitutito");
+                prestito.setDataRestituzioneEffettivo(null);
             } else {
-                prestito.setDataRestituzioneEffettivo(dataRestituzione.minusDays(random.nextInt(5)).toString());
+                prestito.setDataRestituzioneEffettivo(dataRestituzione.minusDays(random.nextInt(5)));
             }
 
             prestitoDAO.save(prestito);
